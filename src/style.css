@@ -1,5 +1,226 @@
-.box{
-    width: 100%;
-    height: 100vh;
-    background-color: red;
+/* fonts */
+@font-face {
+  font-family: "shabnam-bold";
+  src: url("./Assets/Fonts/Shabnam-Bold.ttf") format("truetype");
 }
+@font-face {
+  font-family: "shabnam";
+  src: url("./Assets/Fonts/Shabnam.ttf") format("truetype");
+}
+@font-face {
+  font-family: "shabnam-light";
+  src: url("./Assets/Fonts/Shabnam-Light.ttf") format("truetype");
+}
+@font-face {
+  font-family: "com-Regular";
+  src: url("./Assets/Fonts/Comfortaa-Regular.ttf") format("truetype");
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+input:focus {
+  outline-width: 0;
+}
+                              /* layout right , box top for text login */
+.RightBoxTop {
+  height: 15%;
+  min-height: 100px;
+  font-family: "shabnam-bold";
+  font-size: 17px;
+  color: #0093f0;
+}
+#textLogin {
+  font-size: 20px;
+  font-family: "shabnam";
+}
+#textWriteUser {
+  font-size: 16px;
+  font-family: "shabnam";
+  color: #9e9e9e;
+  margin-top: 2vh;
+  text-align: right;
+}
+/* size icon in inputs */
+.iconInput {
+  top: 0;
+  left: 0;
+  position: absolute;
+  color: #bdbdbd;
+}
+.boxHover{
+  position: relative;
+  width: 100%;
+  margin-top: 5vh;
+  font-size: 16px;
+  font-family: "shabnam";
+}
+i {
+  transition: all 0.5s;
+}
+.boxHover:hover i{
+  color:  #0093ed;
+  transition: all 0.5s;
+}
+.boxHover:hover input::placeholder{
+  color: #0093ed;
+  transition: all 0.5s;
+}
+
+.inputUser {
+  text-align: right;
+  border-color: transparent;
+  border-bottom: 2px solid #e0e0e0;
+  color: #0093ed;
+  transition: all 0.5s;
+}
+.inputUser::placeholder {
+  color: #bdbdbd;
+  transition: all 0.5s;
+}
+.inputUser:hover {
+  border-bottom: 2px solid #0093ed;
+}
+/* button logi */
+.button {
+  height: 60px;
+  border: 0em;
+  border-radius: 5px;
+  background-color: #0093ed;
+  color: white;
+  font-family: "shabnam";
+  font-size: 20px;
+  position: relative;
+  text-align: center;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 1px 5px 20px #b3b3b3;
+}
+.button:after {
+  content: "";
+  background: #4ab6f8;
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px !important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s;
+}
+.button:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s;
+}
+#rememberMe {
+  font-family: "shabnam";
+  font-size: 14px;
+  color: #9e9e9e;
+}
+                                          /* layout left  */
+.boxLeft {
+  background: rgb(15, 176, 233);
+  height: 100vh;
+  background: linear-gradient(
+    45deg,
+    rgba(15, 176, 233, 1) 0%,
+    rgba(130, 233, 218, 1) 100%
+  );
+  overflow: hidden;
+}
+/* radar angle */
+.image {
+  bottom: 50%;
+  left: 50%;
+  position: absolute;
+  display: block;
+  animation: spin 8s linear infinite;
+  transform-origin: bottom left;
+  opacity: 0.2;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* item circle */
+.element {
+  height: 25px;
+  width: 25px;
+  position: absolute;
+  animation-name: circleRadar;
+  background-color: white;
+  opacity: 0.1;
+  border-radius: 50%;
+}
+.circleOne{
+  animation: circleRadar 8s 1s infinite normal forwards;
+}.circleTwo{
+  animation: circleRadar 8s 1.5s infinite normal forwards;
+}.circleThree{
+  animation: circleRadar 8s 2s infinite normal forwards;
+}.circleFour{
+  animation: circleRadar 8s 2.5s infinite normal forwards;
+}.circleFive{
+  animation: circleRadar 8s 3s infinite normal forwards;
+}.circleSix{
+  animation: circleRadar 8s 3.5s infinite normal forwards;
+}.circleSeven{
+  animation: circleRadar 8s 4s infinite normal forwards;
+}
+@keyframes circleRadar {
+  0% {
+    transform: scale(0.2);
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 0.05;
+  }
+  100% {
+    transform: scale(60);
+    opacity: 0;
+  }
+}
+/* text anti virus */
+.textAntivirus{
+  display: block;
+  position: absolute;
+  bottom: 0;
+  color: white;
+  text-align: center;
+  margin-bottom: 1.5%;
+  font-size: 20px;
+  font-family: "com-Regular";
+}
+
+
+@media screen and (max-width: 1200px) {
+}
+
+@media screen and (max-width: 992px) {
+
+}
+
+@media screen and (max-width: 767px) {
+
+}
+
+@media screen and (max-width: 575px) {
+  .textAntivirus{
+    font-size: 16px;
+  }
+}
+

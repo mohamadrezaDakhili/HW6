@@ -1,9 +1,7 @@
 const ViewModel = {};
 
-ViewModel.parseNode = (comp) => {
-  const template = document.createElement("template");
-  template.innerHTML = comp;
-  return template.content;
+ViewModel.createTextNode  = (comp) => {
+  return document.createTextNode(comp);
 };
 
 ViewModel.createElement = function (type, props, children) {
@@ -11,7 +9,6 @@ ViewModel.createElement = function (type, props, children) {
   const element = document.createElement(type);
   for (const property in props) {
     if (property === "style") {
-      //   element.style = props["style"];
       Object.assign(element.style, props["style"]);
     } else if (property === "className") {
       element.className = props["className"];
@@ -27,13 +24,13 @@ ViewModel.createElement = function (type, props, children) {
       for (let index = 0; index < children.length; index++) {
         element.appendChild(
           typeof children[index] === "string"
-            ? this.parseNode(children[index])
+            ? this.createTextNode (children[index])
             : children[index]
         );
       }
     } else {
       element.appendChild(
-        typeof children === "string" ? this.parseNode(children) : children
+        typeof children === "string" ? this.createTextNode (children) : children
       );
     }
   }
