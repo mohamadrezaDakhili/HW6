@@ -1,19 +1,19 @@
 /* fonts */
 @font-face {
   font-family: "shabnam-bold";
-  src: url("./Assets/Fonts/Shabnam-Bold.ttf") format("truetype");
+  src: url("../Assets/Fonts/Shabnam-Bold.ttf") format("truetype");
 }
 @font-face {
   font-family: "shabnam";
-  src: url("./Assets/Fonts/Shabnam.ttf") format("truetype");
+  src: url("../Assets/Fonts/Shabnam.ttf") format("truetype");
 }
 @font-face {
   font-family: "shabnam-light";
-  src: url("./Assets/Fonts/Shabnam-Light.ttf") format("truetype");
+  src: url("../Assets/Fonts/Shabnam-Light.ttf") format("truetype");
 }
 @font-face {
   font-family: "com-Regular";
-  src: url("./Assets/Fonts/Comfortaa-Regular.ttf") format("truetype");
+  src: url("../Assets/Fonts/Comfortaa-Regular.ttf") format("truetype");
 }
 * {
   margin: 0;
@@ -28,7 +28,7 @@ body {
 input:focus {
   outline-width: 0;
 }
-                              /* layout right , box top for text login */
+/* layout right , box top for text login */
 .RightBoxTop {
   height: 15%;
   min-height: 100px;
@@ -54,7 +54,7 @@ input:focus {
   position: absolute;
   color: #bdbdbd;
 }
-.boxHover{
+.boxHover {
   position: relative;
   width: 100%;
   margin-top: 5vh;
@@ -64,11 +64,11 @@ input:focus {
 i {
   transition: all 0.5s;
 }
-.boxHover:hover i{
-  color:  #0093ed;
+.boxHover:hover i {
+  color: #0093ed;
   transition: all 0.5s;
 }
-.boxHover:hover input::placeholder{
+.boxHover:hover input::placeholder {
   color: #0093ed;
   transition: all 0.5s;
 }
@@ -128,7 +128,7 @@ i {
   font-size: 14px;
   color: #9e9e9e;
 }
-                                          /* layout left  */
+/* layout left  */
 .boxLeft {
   background: rgb(15, 176, 233);
   height: 100vh;
@@ -166,19 +166,25 @@ i {
   opacity: 0.1;
   border-radius: 50%;
 }
-.circleOne{
+.circleOne {
   animation: circleRadar 8s 1s infinite normal forwards;
-}.circleTwo{
+}
+.circleTwo {
   animation: circleRadar 8s 1.5s infinite normal forwards;
-}.circleThree{
+}
+.circleThree {
   animation: circleRadar 8s 2s infinite normal forwards;
-}.circleFour{
+}
+.circleFour {
   animation: circleRadar 8s 2.5s infinite normal forwards;
-}.circleFive{
+}
+.circleFive {
   animation: circleRadar 8s 3s infinite normal forwards;
-}.circleSix{
+}
+.circleSix {
   animation: circleRadar 8s 3.5s infinite normal forwards;
-}.circleSeven{
+}
+.circleSeven {
   animation: circleRadar 8s 4s infinite normal forwards;
 }
 @keyframes circleRadar {
@@ -195,7 +201,7 @@ i {
   }
 }
 /* text anti virus */
-.textAntivirus{
+.textAntivirus {
   display: block;
   position: absolute;
   bottom: 0;
@@ -206,21 +212,17 @@ i {
   font-family: "com-Regular";
 }
 
-
 @media screen and (max-width: 1200px) {
 }
 
 @media screen and (max-width: 992px) {
-
 }
 
 @media screen and (max-width: 767px) {
-
 }
 
 @media screen and (max-width: 575px) {
-  .textAntivirus{
+  .textAntivirus {
     font-size: 16px;
   }
 }
-
